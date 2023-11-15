@@ -1,0 +1,8 @@
+com\clase06\Clase06.class
+com\controllers\exceptions\PreexistingEntityException.class
+com\controllers\exceptions\IllegalOrphanException.class
+com\models\Alumnos_.class
+com\controllers\PersitenceController.class
+com\models\Alumnos.class
+com\controllers\AlumnosJpaController.class
+com\controllers\exceptions\NonexistentEntityException.class
