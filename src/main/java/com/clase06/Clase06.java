@@ -1,12 +1,16 @@
 package com.clase06;
-
-import com.controllers.PersitenceController;
+import com.controllers.Controllers;
+import com.models.Alumnos;
+import java.util.Date;
 
 public class Clase06
 {
-
     public static void main(String[] args)
     {
-        PersitenceController controller = new PersitenceController();
+        Controllers control = new Controllers();
+        
+        Alumnos alu = new Alumnos(12, "Perico", "De Los Palotes", new Date());
+        
+        control.crearAlumno(alu);
     }
 }
