@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -24,15 +25,21 @@ public class Alumnos implements Serializable
     private String apellido;
     @Temporal(TemporalType.DATE)
     private Date fechaNac;
+    @OneToOne
+    private Carreras carrera;
 
     public Alumnos() { }
 
-    public Alumnos(int id, String nombre, String apellido, Date fechaNac)
-    {   this.id = id;
+    public Alumnos(int id, String nombre, String apellido, Date fechaNac, Carreras carrera) {
+        this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNac = fechaNac;
+        this.carrera = carrera;
     }
+
+    
+    
 
     public int getId() {
         return id;
@@ -48,6 +55,10 @@ public class Alumnos implements Serializable
 
     public Date getFechaNac() {
         return fechaNac;
+    }
+
+    public Carreras getCarrera() {
+        return carrera;
     }
 
     public void setId(int id) {
@@ -66,11 +77,15 @@ public class Alumnos implements Serializable
         this.fechaNac = fechaNac;
     }
 
+    public void setCarrera(Carreras carrera) {
+        this.carrera = carrera;
+    }
+
     @Override
     public String toString() {
-        return "Alumnos{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", fechaNac=" + fechaNac + '}';
+        return "Alumnos{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", fechaNac=" + fechaNac + ", carrera=" + carrera + '}';
     }
-    
+
     
     
 }

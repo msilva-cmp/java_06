@@ -1,8 +1,15 @@
+com\models\Carreras_.class
 com\clase06\Clase06.class
-com\controllers\exceptions\PreexistingEntityException.class
-com\controllers\exceptions\IllegalOrphanException.class
 com\models\Alumnos_.class
+com\models\Carreras.class
+com\controllers\Controllers.class
 com\controllers\PersitenceController.class
+com\controllers\MateriasJpaController.class
+com\controllers\exceptions\PreexistingEntityException.class
+com\models\Materias_.class
+com\controllers\exceptions\IllegalOrphanException.class
+com\models\Materias.class
 com\models\Alumnos.class
 com\controllers\AlumnosJpaController.class
+com\controllers\CarrerasJpaController.class
 com\controllers\exceptions\NonexistentEntityException.class

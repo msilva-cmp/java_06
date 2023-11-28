@@ -12,19 +12,15 @@ import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
+public class AlumnosJpaController implements Serializable {
 
-public class AlumnosJpaController implements Serializable
-{
     public AlumnosJpaController(EntityManagerFactory emf) {
         this.emf = emf;
     }
-
     public AlumnosJpaController()
     {
         emf = Persistence.createEntityManagerFactory("testJPAPU");
     }
-    
-    
     private EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
